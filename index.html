@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Accueil — John Venien, portfolio BTS SIO SLAM</title>
+<meta name="description" content="Portfolio de John Venien, étudiant en BTS SIO option SLAM en alternance à l'Efrei Paris : parcours, compétences, projets et veille.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <nav class="container" aria-label="Menu principal">
+    <a href="index.html" class="logo">John<span>.</span>Venien</a>
+    <button class="burger" type="button" aria-label="Ouvrir le menu" aria-expanded="false">☰</button>
+    <ul class="nav-links">
+      <li><a href="index.html" aria-current="page">Accueil</a></li>
+      <li><a href="parcours.html">Parcours</a></li>
+      <li><a href="competences.html">Compétences</a></li>
+      <li><a href="projets.html">Projets</a></li>
+      <li><a href="veille.html">Veille</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <div class="page-head container">
+    <p class="tag">&gt; BTS SIO — option SLAM — alternance</p>
+    <h1>John Venien<br><span class="grad">Développeur d'applications</span></h1>
+    <p>Étudiant en BTS Services Informatiques aux Organisations, option Solutions Logicielles et Applications Métiers, à l'Efrei Paris (campus de Villejuif), en alternance chez QAPINEXT.</p>
+  </div>
+  <section>
+    <div class="container">
+      <div class="btns">
+        <a href="projets.html" class="btn primary">Voir mes projets</a>
+        <a href="contact.html" class="btn">Me contacter</a>
+      </div>
+    </div>
+  </section>
+  <section id="apropos">
+    <div class="container">
+      <h2>À propos</h2>
+      <p class="lead">Après deux années de classe préparatoire intégrée, j'ai choisi une voie plus concrète orientée développement logiciel avec le BTS SIO SLAM.
+      En alternance chez QAPINEXT, je travaille aussi sur l'infrastructure qui fait tourner les applications.</p>
+    </div>
+  </section>
+  <section id="competences">
+    <div class="container">
+      <h2>Compétences principales</h2>
+      <p class="lead">Les technologies que j'utilise en formation et en entreprise.</p>
+      <ul class="chips big" aria-label="Compétences principales">
+        <li class="chip">HTML / CSS</li><li class="chip">JavaScript</li><li class="chip">PHP</li><li class="chip">SQL</li>
+        <li class="chip">Python</li><li class="chip">Git</li><li class="chip">Linux</li>
+      </ul>
+      <p style="margin-top:20px"><a href="competences.html">Voir les compétences du BTS →</a></p>
+    </div>
+  </section>
+  <section id="projets">
+    <div class="container">
+      <h2>Projets à la une</h2>
+      <p class="lead">Un aperçu de mes réalisations. Chaque projet présente le besoin, les outils et le résultat.</p>
+      <div class="grid">
+        <article class="card">
+          <h3>Environnement d'apprentissage</h3>
+          <p class="meta">Efrei · octobre 2026</p>
+          <p>Dépôt GitHub, machine virtuelle Debian, commandes Linux et notes Obsidian versionnées.</p>
+          <div class="links"><a href="realisation-environnement.html">Lire la fiche</a></div>
+        </article>
+        <article class="card">
+          <h3>Portfolio en ligne</h3>
+          <p class="meta">Efrei · octobre 2026</p>
+          <p>Ce site : HTML sémantique, CSS (grid et flexbox), publié avec GitHub Pages.</p>
+          <div class="links"><a href="projets.html">Voir le projet</a></div>
+        </article>
+        <article class="card">
+          <h3>Forge Git de l'entreprise</h3>
+          <p class="meta">QAPINEXT · 2026</p>
+          <p>Mise en place d'une forge Git auto-hébergée et organisation des dépôts.</p>
+          <div class="links"><a href="projets.html">Voir le projet</a></div>
+        </article>
+      </div>
+      <p style="margin-top:24px"><a href="projets.html" class="btn primary">Tous les projets</a></p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <p>© <span id="y">2026</span> John Venien — Portfolio BTS SIO SLAM · Efrei Paris</p>
+    <nav aria-label="Liens légaux">
+      <a href="mentions-legales.html">Mentions légales</a>
+      <a href="confidentialite.html">Politique de confidentialité</a>
+      <a href="mentions-legales.html#credits">Crédits des images</a>
+    </nav>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('y').textContent = new Date().getFullYear();
+  const burger = document.querySelector('.burger');
+  const menu = document.querySelector('.nav-links');
+  burger.addEventListener('click', () => {
+    const open = menu.classList.toggle('open');
+    burger.setAttribute('aria-expanded', open);
+  });
+</script>
+</body>
+</html>
