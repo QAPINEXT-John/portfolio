@@ -1,0 +1,150 @@
+/* ==========================================================================
+   Portfolio de John Venien — feuille de style personnelle
+   Elle s'applique après le thème Start Bootstrap « Personal » (css/theme-personal.css)
+   et adapte le site à ma charte : couleurs, police Rubik, mise en page, états interactifs.
+   ========================================================================== */
+
+/* ---------- 1. Police Rubik, hébergée sur le site (pas de Google Fonts : RGPD) ---------- */
+@font-face { font-family: 'Rubik'; font-weight: 400; font-display: swap; src: url('../fonts/rubik-latin-400-normal.woff2') format('woff2'); }
+@font-face { font-family: 'Rubik'; font-weight: 500; font-display: swap; src: url('../fonts/rubik-latin-500-normal.woff2') format('woff2'); }
+@font-face { font-family: 'Rubik'; font-weight: 700; font-display: swap; src: url('../fonts/rubik-latin-700-normal.woff2') format('woff2'); }
+@font-face { font-family: 'Rubik'; font-weight: 800; font-display: swap; src: url('../fonts/rubik-latin-800-normal.woff2') format('woff2'); }
+
+/* ---------- 2. Couleurs de la charte (variables) ---------- */
+:root {
+    --marron: #5C230E;
+    --bleu: #1E4FDA;
+    --beige: #F7F1E3;
+    --beige-fonce: #EFE5D1;
+    --orange: #F2A25C;
+    --texte: #3B2A22;
+    /* variables de Bootstrap redéfinies avec la charte */
+    --bs-primary: #1E4FDA;
+    --bs-primary-rgb: 30, 79, 218;
+    --bs-body-font-family: 'Rubik', system-ui, sans-serif;
+    --bs-body-color: #3B2A22;
+}
+
+/* ---------- 3. Base ---------- */
+body { background: var(--beige); color: var(--texte); font-family: 'Rubik', system-ui, sans-serif; }
+.bg-light { background: var(--beige-fonce) !important; }
+.card { background: #fff; }
+.card .bg-light { background: var(--beige) !important; }
+.text-muted { color: #6b5a50 !important; }
+.text-primary { color: var(--bleu) !important; }
+.text-secondary { color: var(--marron) !important; }
+h1, h2, h3, .display-3, .display-5 { color: var(--marron); font-weight: 800; }
+/* le thème met un dégradé dans les titres : je le remplace par le marron de la charte */
+.text-gradient { background: none !important; -webkit-text-fill-color: currentColor !important; color: var(--marron) !important; }
+a { color: var(--bleu); }
+code { color: var(--marron); background: var(--beige); padding: 1px 5px; border-radius: 4px; }
+.meta { color: var(--bleu); font-weight: 500; font-size: .85rem; text-transform: uppercase; letter-spacing: .06em; margin-bottom: .4rem; }
+ul.chips, ul.grille-items, ul.grille-blocs, ul.grille-certifs { list-style: none; padding: 0; }
+
+/* ---------- 4. En-tête et menu ---------- */
+.navbar { background: var(--beige); border-bottom: 3px solid var(--bleu); }
+.navbar-brand { color: var(--marron) !important; font-weight: 800; font-size: 1.45rem; letter-spacing: -.5px; }
+.navbar-brand .point { color: var(--bleu); }
+.navbar .nav-link { color: var(--marron) !important; font-weight: 500; text-transform: uppercase; letter-spacing: .06em; }
+.navbar .nav-link:hover,
+.navbar .nav-link[aria-current="page"] { color: var(--bleu) !important; }
+.navbar .nav-link[aria-current="page"] { text-decoration: underline 2px; text-underline-offset: 6px; }
+
+/* ---------- 5. Titres de section, comme les modèles PowerPoint de la charte ---------- */
+.titre-barre { border-left: 6px solid var(--bleu); padding-left: 14px; text-transform: uppercase; font-weight: 500 !important; letter-spacing: .03em; font-size: 1.6rem; }
+
+/* ---------- 6. Boutons ---------- */
+.btn { transition: transform .15s ease, box-shadow .15s ease, background-color .15s ease; }
+.btn-primary { background: var(--bleu) !important; border-color: var(--bleu) !important; text-transform: uppercase; letter-spacing: .06em; }
+.btn-primary:hover { background: #163fb3 !important; transform: translateY(-2px); box-shadow: 0 6px 16px rgba(30, 79, 218, .3); }
+.btn-outline-dark { border: 2px solid var(--marron) !important; color: var(--marron) !important; text-transform: uppercase; letter-spacing: .06em; }
+.btn-outline-dark:hover { background: var(--marron) !important; color: var(--beige) !important; transform: translateY(-2px); }
+.badge.bg-gradient-primary-to-secondary,
+.feature.bg-gradient-primary-to-secondary { background: var(--bleu) !important; }
+.badge { font-weight: 500; letter-spacing: .08em; }
+
+/* Focus visible pour la navigation au clavier (touche Tab) */
+a:focus-visible, button:focus-visible, .btn:focus-visible, .navbar-toggler:focus-visible {
+    outline: 3px solid var(--orange);
+    outline-offset: 3px;
+    box-shadow: none;
+}
+
+/* ---------- 7. Bloc « JV » de l'accueil ---------- */
+.profile.bg-gradient-primary-to-secondary { background: linear-gradient(135deg, var(--bleu), #6E8EEA) !important; display: flex; align-items: center; justify-content: center; }
+.initiales { font-weight: 800; font-size: 8rem; color: var(--beige); letter-spacing: -.04em; }
+.profile .points {                     /* grille de 2 × 10 points dessinée avec un dégradé radial répété */
+    aspect-ratio: 191.6 / 1215.4;
+    background-image: radial-gradient(circle closest-side, var(--marron) 60%, transparent 66%);
+    background-size: 50% 10%;
+}
+
+/* ---------- 8. Étiquettes (Flexbox) ---------- */
+.chips { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
+.chips-gauche { justify-content: flex-start; }
+.chips li { background: #fff; border: 1px solid #E2D5BB; color: var(--marron); border-radius: 999px; padding: 6px 16px; font-weight: 500; }
+.card .chips li { background: var(--beige); }
+
+/* ---------- 9. Grilles (CSS Grid) ---------- */
+.grille-projets { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.grille-fiche { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+.grille-items { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.grille-items li { background: var(--beige); border-radius: 1rem; padding: 1rem; }
+.grille-blocs { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+.grille-blocs li { flex-direction: row; gap: 14px; align-items: center; }
+.code-comp { background: var(--bleu); color: #fff; font-weight: 700; border-radius: 8px; padding: 6px 10px; flex-shrink: 0; }
+.grille-certifs { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+.grille-certifs li { flex-direction: row; justify-content: space-between; align-items: center; gap: 12px; }
+.etat { font-size: .8rem; font-weight: 500; border-radius: 999px; padding: 4px 12px; background: var(--beige); color: var(--marron); white-space: nowrap; }
+.etat.en-cours { background: var(--bleu); color: #fff; }
+.grille-contact { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+.carte-contact { text-decoration: none; color: var(--texte); display: flex; flex-direction: column; }
+.preuves { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 24px; }
+.preuves img { width: 100%; height: auto; display: block; }
+
+/* ---------- 10. Cartes projets ---------- */
+.carte-projet, .carte-contact { transition: transform .2s ease, box-shadow .2s ease; }
+.carte-projet:hover, .carte-contact:hover, .carte-contact:focus-visible { transform: translateY(-4px); box-shadow: 0 1rem 2rem rgba(92, 35, 14, .15) !important; }
+.vignette { background: var(--bleu); color: var(--beige); display: flex; align-items: center; justify-content: center; font-size: 4rem; min-width: 200px; }
+.lien-fleche { font-weight: 500; text-decoration: none; margin-right: 1.25rem; }
+.lien-fleche::after { content: " →"; transition: margin-left .15s ease; }
+.lien-fleche:hover::after { margin-left: 4px; }
+.filtres { display: flex; flex-wrap: wrap; gap: 10px; }
+.filtres button { border: 2px solid var(--marron); background: transparent; color: var(--marron); border-radius: 999px; padding: 6px 18px; font-weight: 500; }
+.filtres button:hover { background: var(--beige-fonce); }
+.filtres button[aria-pressed="true"] { background: var(--marron); color: var(--beige); }
+.coche { color: var(--bleu); font-weight: 700; }
+.table { --bs-table-bg: transparent; }
+.table thead th { color: var(--marron); border-bottom: 2px solid var(--bleu); }
+
+/* ---------- 11. Pages légales ---------- */
+.texte-legal h2 { font-size: 1.25rem; margin-top: 1.75rem; }
+.texte-legal h2:first-child { margin-top: 0; }
+
+/* ---------- 12. Pied de page ---------- */
+footer.pied { background: var(--marron); color: var(--beige); }
+footer.pied a { color: var(--orange); }
+footer.pied a:hover { color: #fff; }
+
+/* ---------- 13. Tablette (601 à 1024 px) ---------- */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .grille-projets { grid-template-columns: repeat(2, 1fr); }
+    .grille-items { grid-template-columns: repeat(2, 1fr); }
+    .initiales { font-size: 6.5rem; }
+}
+
+/* ---------- 14. Téléphone (600 px et moins) ---------- */
+@media (max-width: 600px) {
+    .container.px-5 { padding-left: 20px !important; padding-right: 20px !important; }
+    .row.gx-5 { --bs-gutter-x: 40px; } /* évite un débordement horizontal de 4 px */
+    .display-3 { font-size: 2.3rem; }
+    .display-5 { font-size: 2rem; }
+    .initiales { font-size: 4.5rem; }
+    .titre-barre { font-size: 1.3rem; }
+    .grille-projets, .grille-fiche, .grille-items, .grille-blocs, .grille-certifs, .grille-contact { grid-template-columns: 1fr; }
+    .card-body.p-5, .card.p-5 { padding: 1.5rem !important; }
+    .projet-ligne { flex-direction: column-reverse; }
+    .vignette { min-width: 0; min-height: 110px; font-size: 3rem; }
+    .projet-ligne .p-5 { padding: 1.5rem !important; }
+    footer.pied nav { margin-top: .5rem; }
+}
