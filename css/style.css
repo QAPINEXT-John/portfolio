@@ -121,6 +121,31 @@ a:focus-visible, button:focus-visible, .btn:focus-visible, .navbar-toggler:focus
 .texte-legal h2 { font-size: 1.25rem; margin-top: 1.75rem; }
 .texte-legal h2:first-child { margin-top: 0; }
 
+
+/* ---------- 11 bis. Tableau de synthèse officiel (épreuve E5) ---------- */
+.tableau-officiel { max-width: 1500px; margin: 0 auto; }
+.identite { display: grid; grid-template-columns: repeat(2, 1fr); gap: 4px 24px; border: 1px solid #E2D5BB; border-radius: .75rem; padding: 12px 16px; margin: 0; }
+.identite div { display: flex; flex-wrap: wrap; gap: 6px; }
+.identite .large { grid-column: 1 / -1; }
+.identite dt { font-weight: 700; color: var(--marron); }
+.identite dd { margin: 0; }
+.synthese { font-size: .82rem; border: 1px solid #E2D5BB; }
+.synthese th, .synthese td { border: 1px solid #E2D5BB; vertical-align: top; }
+.synthese thead th { background: var(--beige); color: var(--marron); border-bottom: 2px solid var(--bleu); }
+.synthese .col-real { min-width: 230px; width: 22%; }
+.synthese .col-per { min-width: 96px; width: 9%; }
+.synthese .col-comp { min-width: 118px; width: 11.5%; }
+.nom-comp { display: block; font-weight: 700; margin-bottom: 6px; }
+.sous-comp, .docs { list-style: none; padding: 0; margin: 0; font-weight: 400; }
+.sous-comp li { font-size: .72rem; color: #6b5a50; padding-left: 10px; position: relative; margin-bottom: 3px; }
+.sous-comp li::before { content: "▸"; position: absolute; left: 0; color: var(--bleu); }
+.docs li { font-size: .78rem; color: #6b5a50; }
+.docs li::before { content: "– "; }
+.synthese .rubrique th { background: var(--marron); color: var(--beige); text-align: center; font-weight: 500; }
+.synthese .case { text-align: center; vertical-align: middle; font-size: 1.1rem; }
+.synthese .periode { white-space: nowrap; }
+.synthese tbody tr:not(.rubrique):hover { background: var(--beige); }
+
 /* ---------- 12. Pied de page ---------- */
 footer.pied { background: var(--marron); color: var(--beige); }
 footer.pied a { color: var(--orange); }
@@ -141,6 +166,7 @@ footer.pied a:hover { color: #fff; }
     .display-5 { font-size: 2rem; }
     .initiales { font-size: 4.5rem; }
     .titre-barre { font-size: 1.3rem; }
+    .identite { grid-template-columns: 1fr; }
     .grille-projets, .grille-fiche, .grille-items, .grille-blocs, .grille-certifs, .grille-contact { grid-template-columns: 1fr; }
     .card-body.p-5, .card.p-5 { padding: 1.5rem !important; }
     .projet-ligne { flex-direction: column-reverse; }
