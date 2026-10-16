@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Projets — John Venien, portfolio BTS SIO SLAM</title>
+    <meta name="description" content="Projets de John Venien : réalisations en entreprise, à l'école et projets personnels, avec contexte, actions et résultats.">
+    <meta name="author" content="John Venien">
+    <!-- Thème Start Bootstrap « Personal » (MIT, inclut Bootstrap 5) -->
+    <link rel="stylesheet" href="css/theme-personal.css">
+    <!-- Icônes Bootstrap, hébergées sur le site -->
+    <link rel="stylesheet" href="vendor/bootstrap-icons/bootstrap-icons.min.css">
+    <!-- Ma feuille de style : charte graphique (couleurs, police Rubik, adaptations) -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="d-flex flex-column h-100">
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light py-3" aria-label="Menu principal">
+            <div class="container px-5">
+                <a class="navbar-brand" href="index.html">John<span class="point">.</span>Venien</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Ouvrir le menu"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="menu">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small">
+                <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+                <li class="nav-item"><a class="nav-link" href="parcours.html">Parcours</a></li>
+                <li class="nav-item"><a class="nav-link" href="competences.html">Compétences</a></li>
+                <li class="nav-item"><a class="nav-link" href="projets.html" aria-current="page">Projets</a></li>
+                <li class="nav-item"><a class="nav-link" href="veille.html">Veille</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="flex-shrink-0">
+        <div class="container px-5 my-5">
+            <div class="text-center mb-5">
+                <h1 class="display-5 fw-bolder mb-0"><span class="text-gradient d-inline">Projets</span></h1>
+                <p class="lead mt-2 mb-0">Projets menés en entreprise, à l’école et en autonomie : objectif, technologies, contribution et résultat.</p>
+            </div>
+            <div class="row gx-5 justify-content-center">
+                <div class="col-lg-11 col-xl-9 col-xxl-8">
+                    <div class="filtres mb-4" role="group" aria-label="Filtrer les projets">
+                        <button type="button" data-f="all" aria-pressed="true">Tout</button>
+                        <button type="button" data-f="entreprise" aria-pressed="false">Entreprise</button>
+                        <button type="button" data-f="ecole" aria-pressed="false">École</button>
+                        <button type="button" data-f="perso" aria-pressed="false">Personnel</button>
+                    </div>
+                    <div id="liste">
+                    <article class="card overflow-hidden shadow rounded-4 border-0 mb-5 carte-projet" id="environnement" data-cat="ecole">
+                        <div class="card-body p-0">
+                            <div class="d-flex align-items-stretch projet-ligne">
+                                <div class="p-5 flex-grow-1">
+                                    <p class="meta mb-1">Efrei · octobre 2026</p>
+                                    <h2 class="fw-bolder">Environnement d’apprentissage personnel</h2>
+                                    <p>Objectif : disposer d’un environnement de travail durable. Dépôt GitHub, Git en ligne de commande, machine virtuelle Debian sous VMware avec snapshot, parcours GameShell et coffre de notes Obsidian versionné. Résultat : mission validée le 14/10/2026.</p>
+                                    <ul class="chips chips-gauche mb-3"><li>C6</li><li>Git</li><li>Linux</li><li>VMware</li></ul>
+                                    <p class="mb-0 liens"><a class="lien-fleche" href="realisation-environnement.html">Lire la fiche</a> <a class="lien-fleche" href="https://github.com/QAPINEXT-John/john-venien">Dépôt Git</a></p>
+                                </div>
+                                <div class="vignette" aria-hidden="true"><i class="bi bi-terminal"></i></div>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="card overflow-hidden shadow rounded-4 border-0 mb-5 carte-projet" id="portfolio" data-cat="ecole">
+                        <div class="card-body p-0">
+                            <div class="d-flex align-items-stretch projet-ligne">
+                                <div class="p-5 flex-grow-1">
+                                    <p class="meta mb-1">Efrei · octobre 2026</p>
+                                    <h2 class="fw-bolder">Portfolio en ligne</h2>
+                                    <p>Objectif : présenter mon parcours et mes réalisations. Template Start Bootstrap adapté à ma charte graphique, HTML sémantique, CSS (flexbox, grid, media queries), versionné avec Git et publié avec GitHub Pages, dans le respect du RGPD.</p>
+                                    <ul class="chips chips-gauche mb-3"><li>C3</li><li>C6</li><li>HTML</li><li>CSS</li><li>Git</li></ul>
+                                    <p class="mb-0 liens"><a class="lien-fleche" href="https://github.com/QAPINEXT-John/portfolio">Code source</a></p>
+                                </div>
+                                <div class="vignette" aria-hidden="true"><i class="bi bi-window"></i></div>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="card overflow-hidden shadow rounded-4 border-0 mb-5 carte-projet" id="forge" data-cat="entreprise">
+                        <div class="card-body p-0">
+                            <div class="d-flex align-items-stretch projet-ligne">
+                                <div class="p-5 flex-grow-1">
+                                    <p class="meta mb-1">QAPINEXT · 2026</p>
+                                    <h2 class="fw-bolder">Forge Git de l’entreprise</h2>
+                                    <p>Objectif : centraliser le code de l’équipe. Mise en place d’une forge Git auto-hébergée : clés SSH, connexion depuis VS Code, organisation des dépôts.</p>
+                                    <ul class="chips chips-gauche mb-3"><li>C1</li><li>C5</li><li>Git</li><li>SSH</li></ul>
+                                    
+                                </div>
+                                <div class="vignette" aria-hidden="true"><i class="bi bi-git"></i></div>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="card overflow-hidden shadow rounded-4 border-0 mb-5 carte-projet" id="monstrotheque" data-cat="perso">
+                        <div class="card-body p-0">
+                            <div class="d-flex align-items-stretch projet-ligne">
+                                <div class="p-5 flex-grow-1">
+                                    <p class="meta mb-1">Projet personnel</p>
+                                    <h2 class="fw-bolder">Monstrothèque</h2>
+                                    <p>Application de catalogue et de suivi de collection.</p>
+                                    <ul class="chips chips-gauche mb-3"><li>C3</li><li>C6</li></ul>
+                                    
+                                </div>
+                                <div class="vignette" aria-hidden="true"><i class="bi bi-collection"></i></div>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="card overflow-hidden shadow rounded-4 border-0 mb-5 carte-projet" id="bock" data-cat="perso">
+                        <div class="card-body p-0">
+                            <div class="d-flex align-items-stretch projet-ligne">
+                                <div class="p-5 flex-grow-1">
+                                    <p class="meta mb-1">Projet personnel</p>
+                                    <h2 class="fw-bolder">B.O.C.K</h2>
+                                    <p>Assistant vocal IA qui fonctionne en local sur Android (application web progressive).</p>
+                                    <ul class="chips chips-gauche mb-3"><li>C5</li><li>C6</li><li>PWA</li></ul>
+                                    
+                                </div>
+                                <div class="vignette" aria-hidden="true"><i class="bi bi-mic"></i></div>
+                            </div>
+                        </div>
+                    </article>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="pied py-4 mt-auto">
+        <div class="container px-5">
+            <div class="row align-items-center justify-content-between flex-column flex-sm-row">
+                <div class="col-auto"><p class="small m-0">© 2026 John Venien — Portfolio BTS SIO SLAM · Efrei Paris</p></div>
+                <div class="col-auto">
+                    <nav aria-label="Liens légaux" class="small">
+                        <a href="mentions-legales.html">Mentions légales</a><span class="mx-1">·</span><a href="confidentialite.html">Confidentialité</a><span class="mx-1">·</span><a href="mentions-legales.html#credits">Crédits</a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- JavaScript de Bootstrap (menu repliable sur téléphone), hébergé sur le site -->
+    <script src="vendor/bootstrap.bundle.min.js"></script>
+    <script>
+        // Filtre des projets : n'affiche que la catégorie choisie
+        document.querySelectorAll('.filtres button').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.filtres button').forEach(b => b.setAttribute('aria-pressed', 'false'));
+                btn.setAttribute('aria-pressed', 'true');
+                const f = btn.dataset.f;
+                document.querySelectorAll('#liste .carte-projet').forEach(c => {
+                    c.hidden = !(f === 'all' || c.dataset.cat === f);
+                });
+            });
+        });
+    </script>
+</body>
+</html>
