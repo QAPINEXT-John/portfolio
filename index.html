@@ -35,26 +35,34 @@
     <main class="flex-shrink-0">
         <section class="py-5" aria-label="Présentation">
             <div class="container px-5 pb-5">
-                <div class="row gx-5 align-items-center">
-                    <div class="col-xxl-5">
-                        <div class="text-center text-xxl-start">
+                <div class="row gx-5 gy-5 align-items-center">
+                    <div class="col-lg-6">
+                        <div class="text-center text-lg-start">
                             <p class="badge bg-gradient-primary-to-secondary text-white mb-4"><span class="text-uppercase">BTS SIO · option SLAM · alternance</span></p>
                             <p class="fs-3 fw-light text-muted mb-1">Bonjour, je suis John Venien</p>
                             <h1 class="display-3 fw-bolder mb-3"><span class="text-gradient d-inline">Développeur d’applications</span></h1>
                             <p class="lead mb-5">Étudiant en BTS SIO option SLAM à l’Efrei Paris (campus de Villejuif), en alternance chez QAPINEXT.</p>
-                            <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xxl-start mb-3">
+                            <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-lg-start mb-3">
                                 <a class="btn btn-primary btn-lg px-5 py-3 me-sm-3 fs-6 fw-bolder" href="parcours.html">Mon parcours</a>
                                 <a class="btn btn-outline-dark btn-lg px-5 py-3 fs-6 fw-bolder" href="projets.html">Mes projets</a>
                             </div>
                         </div>
                     </div>
-                    <div class="col-xxl-7">
-                        <div class="d-flex justify-content-center mt-5 mt-xxl-0">
-                            <div class="profile bg-gradient-primary-to-secondary">
-                                <span class="initiales" aria-hidden="true">JV</span>
-                                <div class="dots-1 points"></div><div class="dots-2 points"></div><div class="dots-3 points"></div><div class="dots-4 points"></div>
-                            </div>
-                        </div>
+                    <div class="col-lg-6">
+                        <aside class="panneau-comp card shadow border-0 rounded-4" aria-labelledby="t-acq">
+                            <p class="surtitre">Épreuve E5 · bloc 1 « Support et mise à disposition de services informatiques »</p>
+                            <h2 class="h4 fw-bolder mb-1" id="t-acq">Mes compétences</h2>
+                            <p class="small text-muted mb-3">Nombre de réalisations où chaque compétence a été mise en œuvre</p>
+                            <ul class="liste-acq">
+                                <li class="on"><span class="code-comp">C1</span><span class="nom">Gérer le patrimoine informatique</span><span class="etat-acq">3 réalisations</span></li>
+                                <li class="off"><span class="code-comp">C2</span><span class="nom">Répondre aux incidents et aux demandes d’assistance et d’évolution</span><span class="etat-acq">À venir</span></li>
+                                <li class="on"><span class="code-comp">C3</span><span class="nom">Développer la présence en ligne de l’organisation</span><span class="etat-acq">1 réalisation</span></li>
+                                <li class="on"><span class="code-comp">C4</span><span class="nom">Travailler en mode projet</span><span class="etat-acq">1 réalisation</span></li>
+                                <li class="on"><span class="code-comp">C5</span><span class="nom">Mettre à disposition des utilisateurs un service informatique</span><span class="etat-acq">3 réalisations</span></li>
+                                <li class="on"><span class="code-comp">C6</span><span class="nom">Organiser son développement professionnel</span><span class="etat-acq">4 réalisations</span></li>
+                            </ul>
+                            <a class="lien-fleche" href="competences.html#t-synth">Voir le tableau de synthèse</a>
+                        </aside>
                     </div>
                 </div>
             </div>
@@ -66,7 +74,7 @@
                         <div class="text-center my-5">
                             <h2 class="display-5 fw-bolder"><span class="text-gradient d-inline">À propos</span></h2>
                             <p class="lead fw-light mb-4">Après deux années de classe préparatoire intégrée, j’ai choisi une voie plus concrète orientée développement logiciel.</p>
-                            <p class="text-muted">En alternance chez QAPINEXT, je travaille aussi sur l’infrastructure qui fait tourner les applications : forge Git, virtualisation, sauvegardes.</p>
+                            <p class="text-muted">En alternance chez QAPINEXT, je travaille aussi sur l’infrastructure qui fait tourner les applications : serveur de sauvegarde et virtualisation avec Proxmox.</p>
                             <ul class="chips mb-4" aria-label="Compétences principales">
                                 <li>HTML / CSS</li><li>JavaScript</li><li>PHP</li><li>SQL</li><li>Python</li><li>Git</li><li>Linux</li>
                             </ul>
@@ -101,10 +109,10 @@
                     </article>
                     <article class="card shadow border-0 rounded-4 carte-projet">
                         <div class="card-body p-4">
-                            <p class="meta">QAPINEXT · 2026</p>
-                            <h3 class="h5 fw-bolder">Forge Git de l’entreprise</h3>
-                            <p>Mise en place d’une forge Git auto-hébergée et organisation des dépôts.</p>
-                            <a class="lien-fleche" href="projets.html#forge">Voir le projet</a>
+                            <p class="meta">QAPINEXT · en cours</p>
+                            <h3 class="h5 fw-bolder">Serveurs de l’entreprise</h3>
+                            <p>Mise en place d’un serveur de sauvegarde et administration de l’environnement de virtualisation Proxmox.</p>
+                            <a class="lien-fleche" href="projets.html#sauvegarde">Voir les projets</a>
                         </div>
                     </article>
                 </div>

@@ -70,14 +70,30 @@ a:focus-visible, button:focus-visible, .btn:focus-visible, .navbar-toggler:focus
     box-shadow: none;
 }
 
-/* ---------- 7. Bloc « JV » de l'accueil ---------- */
-.profile.bg-gradient-primary-to-secondary { background: linear-gradient(135deg, var(--bleu), #6E8EEA) !important; display: flex; align-items: center; justify-content: center; }
-.initiales { font-weight: 800; font-size: 8rem; color: var(--beige); letter-spacing: -.04em; }
-.profile .points {                     /* grille de 2 × 10 points dessinée avec un dégradé radial répété */
-    aspect-ratio: 191.6 / 1215.4;
-    background-image: radial-gradient(circle closest-side, var(--marron) 60%, transparent 66%);
-    background-size: 50% 10%;
+/* ---------- 7. Panneau « Mes compétences » de l'accueil ---------- */
+.panneau-comp { padding: 28px 28px 24px; border-top: 6px solid var(--bleu) !important; }
+.surtitre { font-size: .78rem; font-weight: 500; text-transform: uppercase; letter-spacing: .06em; color: var(--bleu); margin-bottom: .5rem; }
+.liste-acq { list-style: none; padding: 0; margin: 0 0 1.2rem; }
+.liste-acq li {
+    display: grid; grid-template-columns: 44px 1fr auto; align-items: center; gap: 12px;
+    padding: 10px 0; border-bottom: 1px solid #EDE3CF;
 }
+.liste-acq li:last-child { border-bottom: 0; }
+.code-comp {
+    display: inline-flex; align-items: center; justify-content: center; height: 32px;
+    border-radius: 8px; background: var(--bleu); color: #fff; font-weight: 700; font-size: .9rem;
+}
+.liste-acq .nom { color: var(--marron); font-weight: 500; line-height: 1.3; }
+.etat-acq {
+    font-size: .8rem; font-weight: 500; white-space: nowrap; padding: 3px 10px; border-radius: 999px;
+    background: #E3EAFB; color: var(--bleu);
+}
+.liste-acq li.off .code-comp { background: #fff; color: #8A6D5E; border: 2px dashed #C9B79E; }
+.liste-acq li.off .nom { color: #8A6D5E; }
+.liste-acq li.off .etat-acq { background: var(--beige); color: #8A6D5E; border: 1px solid #E2D5BB; }
+.lien-fleche { font-weight: 600; color: var(--bleu); text-decoration: none; }
+.lien-fleche::after { content: " →"; }
+.lien-fleche:hover { text-decoration: underline; }
 
 /* ---------- 8. Étiquettes (Flexbox) ---------- */
 .chips { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
@@ -196,7 +212,6 @@ footer.pied a:hover { color: #fff; }
 @media (min-width: 601px) and (max-width: 1024px) {
     .grille-projets { grid-template-columns: repeat(2, 1fr); }
     .grille-items { grid-template-columns: repeat(2, 1fr); }
-    .initiales { font-size: 6.5rem; }
 }
 
 /* ---------- 14. Téléphone (600 px et moins) ---------- */
@@ -205,7 +220,9 @@ footer.pied a:hover { color: #fff; }
     .row.gx-5 { --bs-gutter-x: 40px; } /* évite un débordement horizontal de 4 px */
     .display-3 { font-size: 2.3rem; }
     .display-5 { font-size: 2rem; }
-    .initiales { font-size: 4.5rem; }
+    .panneau-comp { padding: 20px 18px 18px; }
+    .liste-acq li { grid-template-columns: 40px 1fr; row-gap: 4px; }
+    .etat-acq { grid-column: 2; justify-self: start; }
     .titre-barre { font-size: 1.3rem; }
     .grille-projets, .grille-fiche, .grille-items, .grille-blocs, .grille-certifs, .grille-contact { grid-template-columns: 1fr; }
     .card-body.p-5, .card.p-5 { padding: 1.5rem !important; }
