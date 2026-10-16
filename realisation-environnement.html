@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Fiche réalisation — John Venien, portfolio BTS SIO SLAM</title>
+    <meta name="description" content="Fiche de réalisation : mise en place d'un environnement d'apprentissage personnel (Git, GitHub, VM Debian, Obsidian).">
+    <meta name="author" content="John Venien">
+    <!-- Thème Start Bootstrap « Personal » (MIT, inclut Bootstrap 5) -->
+    <link rel="stylesheet" href="css/theme-personal.css">
+    <!-- Icônes Bootstrap, hébergées sur le site -->
+    <link rel="stylesheet" href="vendor/bootstrap-icons/bootstrap-icons.min.css">
+    <!-- Ma feuille de style : charte graphique (couleurs, police Rubik, adaptations) -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="d-flex flex-column h-100">
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light py-3" aria-label="Menu principal">
+            <div class="container px-5">
+                <a class="navbar-brand" href="index.html">John<span class="point">.</span>Venien</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Ouvrir le menu"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="menu">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small">
+                <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+                <li class="nav-item"><a class="nav-link" href="parcours.html">Parcours</a></li>
+                <li class="nav-item"><a class="nav-link" href="competences.html">Compétences</a></li>
+                <li class="nav-item"><a class="nav-link" href="projets.html" aria-current="page">Projets</a></li>
+                <li class="nav-item"><a class="nav-link" href="veille.html">Veille</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="flex-shrink-0">
+        <div class="container px-5 my-5">
+            <div class="text-center mb-5">
+                <h1 class="display-5 fw-bolder mb-0"><span class="text-gradient d-inline">Mettre en place son environnement d’apprentissage</span></h1>
+                <p class="lead mt-2 mb-0">Fiche réalisation · Efrei · octobre 2026 — compétence valorisée : C6, organiser son développement professionnel.</p>
+            </div>
+            <div class="row gx-5 justify-content-center">
+                <div class="col-lg-11 col-xl-9 col-xxl-8">
+                    <section aria-labelledby="t-demarche">
+                    <h2 class="titre-barre fw-bolder mb-4"><span id="t-demarche">Démarche</span></h2>
+                        <div class="grille-fiche mb-5">
+                        <article class="card shadow border-0 rounded-4 p-4">
+                            <h3 class="h5 fw-bolder">Besoin et objectif</h3>
+                            <p class="mb-0">Mission Educentre du BTS SIO : en arrivant dans l’équipe technique d’une PME, il faut un environnement de travail durable (documentation, code, machines de test) qui permette de tout retrouver si le PC tombe en panne.</p>
+                        </article>
+                        <article class="card shadow border-0 rounded-4 p-4">
+                            <h3 class="h5 fw-bolder">Outils</h3>
+                            <ul class="chips chips-gauche mb-0"><li>Git</li><li>GitHub</li><li>GitHub Desktop</li><li>VMware</li><li>Debian</li><li>GameShell</li><li>Obsidian</li><li>Markdown</li></ul>
+                        </article>
+                        <article class="card shadow border-0 rounded-4 p-4">
+                            <h3 class="h5 fw-bolder">Étapes</h3>
+                            <ol class="mb-0">
+                                <li>Création d’un dépôt GitHub public et configuration de Git.</li>
+                                <li>Clonage, premier cycle commit puis push.</li>
+                                <li>Machine virtuelle Debian (2 Go, 2 vCPU, 20 Go) et snapshot « installation-propre ».</li>
+                                <li>Cinq premières missions GameShell (commandes Linux).</li>
+                                <li>Fiche mémo de 10 commandes Linux.</li>
+                                <li>Coffre Obsidian versionné dans le dépôt.</li>
+                            </ol>
+                        </article>
+                        <article class="card shadow border-0 rounded-4 p-4">
+                            <h3 class="h5 fw-bolder">Résultat</h3>
+                            <p>Les 10 livrables ont été rendus et la mission a été validée le 14/10/2026. Le dépôt sert de sauvegarde : un simple <code>git clone</code> suffit pour tout retrouver.</p>
+                            <p class="mb-0"><a class="lien-fleche" href="https://github.com/QAPINEXT-John/john-venien">Voir le dépôt</a></p>
+                        </article>
+                        </div>
+                    </section>
+                    <section aria-labelledby="t-diff">
+                    <h2 class="titre-barre fw-bolder mb-4"><span id="t-diff">Difficultés, solutions et apprentissages</span></h2>
+                        <div class="grille-fiche mb-5">
+                        <article class="card shadow border-0 rounded-4 p-4">
+                            <h3 class="h5 fw-bolder">GameShell refuse root</h3>
+                            <p class="mb-0">Le jeu refusait de se lancer avec le compte administrateur de la VM. Solution : installer les paquets en root, puis revenir à mon utilisateur avec <code>su - john</code> pour lancer le jeu.</p>
+                        </article>
+                        <article class="card shadow border-0 rounded-4 p-4">
+                            <h3 class="h5 fw-bolder">Ne rien publier de sensible</h3>
+                            <p class="mb-0">Le dépôt est public. J’ai ajouté un fichier <code>.gitignore</code> qui exclut les fichiers propres à la machine et tout ce qui ressemble à un secret (<code>.env</code>, clés SSH, mots de passe).</p>
+                        </article>
+                        <article class="card shadow border-0 rounded-4 p-4">
+                            <h3 class="h5 fw-bolder">Ce que j’ai appris</h3>
+                            <ul class="mb-0">
+                                <li>Le cycle Git : modifier, <code>add</code>, <code>commit</code>, <code>push</code>.</li>
+                                <li>Un snapshot permet de revenir en arrière après une erreur.</li>
+                                <li>Écrire une procédure en Markdown claire et réutilisable.</li>
+                            </ul>
+                        </article>
+                        </div>
+                    </section>
+                    <section aria-labelledby="t-preuves">
+                    <h2 class="titre-barre fw-bolder mb-4"><span id="t-preuves">Preuves</span></h2>
+                        <div class="preuves mb-5">
+                            <figure class="card shadow border-0 rounded-4 overflow-hidden">
+                                <img src="images/depot-github.webp" alt="Page du dépôt GitHub john-venien avec le fichier README" width="800" height="455" loading="lazy">
+                                <figcaption class="p-3 small">Le dépôt GitHub public créé pour la mission.</figcaption>
+                            </figure>
+                            <figure class="card shadow border-0 rounded-4 overflow-hidden">
+                                <img src="images/coffre-obsidian.webp" alt="Coffre Obsidian ouvert sur la note d’accueil, avec l’arborescence des dossiers" width="1200" height="800" loading="lazy">
+                                <figcaption class="p-3 small">Le coffre de notes Obsidian et son organisation.</figcaption>
+                            </figure>
+                            <figure class="card shadow border-0 rounded-4 overflow-hidden">
+                                <img src="images/coffre-versionne-github.webp" alt="Historique GitHub Desktop et page du dépôt montrant le coffre versionné" width="1200" height="1482" loading="lazy">
+                                <figcaption class="p-3 small">Le coffre versionné : historique des commits et dépôt à jour sur GitHub.</figcaption>
+                            </figure>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="pied py-4 mt-auto">
+        <div class="container px-5">
+            <div class="row align-items-center justify-content-between flex-column flex-sm-row">
+                <div class="col-auto"><p class="small m-0">© 2026 John Venien — Portfolio BTS SIO SLAM · Efrei Paris</p></div>
+                <div class="col-auto">
+                    <nav aria-label="Liens légaux" class="small">
+                        <a href="mentions-legales.html">Mentions légales</a><span class="mx-1">·</span><a href="confidentialite.html">Confidentialité</a><span class="mx-1">·</span><a href="mentions-legales.html#credits">Crédits</a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- JavaScript de Bootstrap (menu repliable sur téléphone), hébergé sur le site -->
+    <script src="vendor/bootstrap.bundle.min.js"></script>
+</body>
+</html>
